@@ -1,0 +1,19 @@
+{
+  "npm.binPath": "pnpm",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "json",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "coc.preferences.jumpCommand": "tabe",
+  "prettier.trailingComma": "es5",
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": false,
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/bin/black",
+}
