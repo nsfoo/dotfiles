@@ -20,13 +20,21 @@ alias c wl-copy
 abbr S "sudo pacman -Syu"
 abbr Rs "sudo pacman -Rs"
 abbr Ss "pacman -Ss"
+abbr sr "source $HOME/.config/fish/config.fish"
 
 set -gx NNN_TRASH 1
 set -gx NNN_FCOLORS 0404040000000600010F0F02
 
 set -gx PATH $PATH $HOME/.local/bin
+set -gx PATH $PATH $HOME/.cargo/bin
 set -gx PATH $PATH $HOME/.node_modules/bin
-# pnpm
+#pnpm
 set -gx PNPM_HOME $HOME/.local/share/pnpm
 set -gx PATH $PNPM_HOME $PATH
-# pnpm end
+#q
+set -gx QHOME $HOME/.local/bin/q
+set -gx PATH $PATH $HOME/.local/bin/q
+set -gx QREMOTE_HOME $HOME/.local/bin/qremote
+set -gx PATH $PATH $HOME/.local/bin/qremote/bin
+abbr q "rlwrap q -c \$(tput lines) \$(tput cols)"
+abbr qr "qremote -c \$(tput lines) \$(tput cols)"

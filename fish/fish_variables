@@ -4,6 +4,11 @@ SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_Rs:sudo\x20pacman\x20\x2dRs
 SETUVAR _fish_abbr_S:sudo\x20pacman\x20\x2dSyu
 SETUVAR _fish_abbr_Ss:pacman\x20\x2dSs
+SETUVAR _fish_abbr_q:rlwrap\x20q\x20\x2dc\x20\x24\x28tput\x20lines\x29\x20\x24\x28tput\x20cols\x29
+SETUVAR _fish_abbr_qr:qremote\x20\x2dc\x20\x24\x28tput\x20lines\x29\x20\x24\x28tput\x20cols\x29
+SETUVAR _fish_abbr_qremote:qremote\x20\x2dc\x20\x24\x28tput\x20lines\x29\x20\x24\x28tput\x20cols\x29
+SETUVAR _fish_abbr_sr:source\x20/home/nsf/\x2econfig/fish/config\x2efish
+SETUVAR _fish_abbr_src:source\x20/home/nsf/\x2econfig/fish/config\x2efish
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
