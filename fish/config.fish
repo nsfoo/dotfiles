@@ -1,6 +1,5 @@
 eval (ssh-agent -c) >/dev/null 2>&1
 ssh-add $HOME/.ssh/id_ed25519 >/dev/null 2>&1
-ssh-add $HOME/.ssh/id_ed25519_ns7ung >/dev/null 2>&1
 set fish_greeting
 
 set -gx EDITOR nvim
