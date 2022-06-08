@@ -1,7 +1,6 @@
 #!/bin/bash
 
 conf=$HOME/.config
-[ -d $conf ] || mkdir $conf
 pwd=$(pwd)
 
 lns(){
@@ -13,4 +12,18 @@ lns nvim
 lns fish
 lns gitui
 
+sudo pacman -Syu \
+    neovim fish tmux \
+    git docker zip unzip openssh trash-cli nnn curl lsd gcc fzf wget htop neofetch \
+    python python-poetry python-black \
+    rlwrap
+
+chsh -s /bin/fish
+
+#vim-plug
+curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
 #:CocInstall coc-html coc-tsserver coc-json coc-pyright coc-css coc-markdownlint
+
