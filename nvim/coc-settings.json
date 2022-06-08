@@ -15,5 +15,5 @@
   "prettier.singleQuote": true,
   "prettier.bracketSpacing": false,
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/usr/bin/black",
+  "python.formatting.blackPath": "/usr/bin/black"
 }
