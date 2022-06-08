@@ -1,4 +1,4 @@
-#!/bin/fish --no-config
+#!/bin/bash
 
 sudo echo "[interop]
 enabled=true # enable launch of Windows binaries; default is true

@@ -1,4 +1,4 @@
-#!/bin/fish --no-config
+#!/bin/bash
 
 sudo pacman -Syu \
     neovim fish tmux \
