@@ -18,6 +18,8 @@ sudo pacman -Syu \
     python python-poetry python-black \
     rlwrap
 
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+
 chsh -s /bin/fish
 
 #vim-plug
