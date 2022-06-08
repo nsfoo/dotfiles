@@ -1,6 +1,7 @@
 #!/bin/bash
 
 conf=$HOME/.config
+[ -d $conf ] || mkdir $conf
 pwd=$(pwd)
 
 lns(){
