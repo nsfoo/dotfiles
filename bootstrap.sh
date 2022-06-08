@@ -20,7 +20,7 @@ sudo pacman -Syu --needed \
     rlwrap
 
 # install pnpm
-if [ ! -x "$(command -v pnpm)" ]; then 
+if [ -z "$(which pnpm)" ]; then 
   curl -fsSL https://get.pnpm.io/install.sh | sh -
 fi
 
