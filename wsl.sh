@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo echo "[interop]
-enabled=true # enable launch of Windows binaries; default is true
-appendWindowsPath=false # append Windows path to $PATH variable; default is true
+enabled=true
+appendWindowsPath=false
 
 [network]
 hostname=arch
