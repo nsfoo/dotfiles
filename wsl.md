@@ -10,3 +10,10 @@
 "Flags"="27"
 "BounceTime"="0"
 ```
+
+# Disable show more option on right click menu
+
+[Reference](https://www.reddit.com/r/microsoft/comments/sv88tb/comment/hxepvbb/?utm_source=share&utm_medium=web2x&context=3)
+
+`reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve`
+
