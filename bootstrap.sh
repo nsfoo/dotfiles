@@ -12,21 +12,28 @@ lns nvim
 lns fish
 lns gitui
 
-sudo pacman -Syu \
+sudo pacman -Syu --needed \
     neovim fish tmux \
-    git docker zip unzip openssh trash-cli nnn curl lsd gcc fzf wget htop neofetch \
+    git docker zip unzip openssh trash-cli nnn curl lsd gcc fzf wget htop neofetch ripgrep \
     python python-poetry python-black \
     nodejs \
     rlwrap
 
-curl -fsSL https://get.pnpm.io/install.sh | sh -
+# install pnpm
+if [ ! -x "$(command -v pnpm)" ]; then 
+  curl -fsSL https://get.pnpm.io/install.sh | sh -
+fi
 
-chsh -s /bin/fish
+# change shell to fish
+FISH=$(chsh -l | grep fish | sort -n | head -1)
+if [ $FISH != $SHELL ] && [ -n $FISH ]; then
+  chsh -s $FISH
+fi
 
-#vim-plug
-curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-
-#:CocInstall coc-html coc-tsserver coc-json coc-pyright coc-css coc-markdownlint
-
+#neovim
+if [ ! -f $HOME/.local/share/nvim/site/autoload/plug.vim ]; then
+  curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  nvim +PlugInstall +qall
+  nvim +"CocInstall coc-html coc-tsserver coc-json coc-pyright coc-css coc-markdownlint" +qall
+fi

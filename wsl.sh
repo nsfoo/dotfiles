@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo /opt/distrod/bin/distrod enable 
+
 sudo echo "[interop]
 enabled=true
 appendWindowsPath=false
