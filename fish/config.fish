@@ -15,7 +15,16 @@ set -gx FZF_DEFAULT_COMMAND 'rg --hidden -l ""'
 alias n "nnn -H -o"
 alias rm "echo Use 'trash', or the full path i.e. '/bin/rm'"
 alias ls lsd
-alias c wl-copy
+alias cat bat
+
+
+if [ -x "$(command -v wl-copy)" ]
+    alias c wl-copy
+end
+if [ -x "$(command -v win32yank.exe)" ]
+    alias c "win32yank.exe -i"
+end
+
 abbr S "sudo pacman -Syu"
 abbr Rs "sudo pacman -Rs"
 abbr Ss "pacman -Ss"
@@ -30,6 +39,8 @@ set -gx PATH $PATH $HOME/.node_modules/bin
 #pnpm
 set -gx PNPM_HOME $HOME/.local/share/pnpm
 set -gx PATH $PNPM_HOME $PATH
+#kubectl
+abbr ka "kubectl apply -f"
 #q
 set -gx QHOME $HOME/.local/bin/q
 set -gx PATH $PATH $HOME/.local/bin/q

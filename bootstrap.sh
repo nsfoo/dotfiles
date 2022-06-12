@@ -11,16 +11,17 @@ lns tmux
 lns nvim
 lns fish
 lns gitui
+lns alacritty
 
 sudo pacman -Syu --needed \
     neovim fish tmux \
-    git docker zip unzip openssh trash-cli nnn curl lsd gcc fzf wget htop neofetch ripgrep \
+    git docker zip unzip openssh trash-cli nnn curl lsd gcc fzf wget htop neofetch ripgrep bat \
     python python-poetry python-black \
     nodejs \
     rlwrap
 
 # install pnpm
-if [ -z "$(which pnpm)" ]; then 
+if [ ! -x "$(command -v pnpm)" ]; then 
   curl -fsSL https://get.pnpm.io/install.sh | sh -
 fi
 
