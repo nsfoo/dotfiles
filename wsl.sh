@@ -2,7 +2,10 @@
 
 sudo /opt/distrod/bin/distrod enable 
 
-echo "[interop]
+echo "[user]
+default=$USER
+
+[interop]
 enabled=true
 appendWindowsPath=false
 
