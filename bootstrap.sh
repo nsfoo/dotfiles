@@ -36,5 +36,5 @@ if [ ! -f $HOME/.local/share/nvim/site/autoload/plug.vim ]; then
   curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   nvim +PlugInstall +qall
-  nvim +"CocInstall coc-html coc-tsserver coc-json coc-pyright coc-css coc-markdownlint" +qall
+  nvim +"CocInstall coc-html coc-tsserver coc-json coc-pyright coc-css coc-markdownlint coc-rust-analyzer" +qall
 fi
